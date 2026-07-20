@@ -97,7 +97,7 @@ h1 em, h2 em { color: var(--blue-light); font-style: normal; }
 .service-card:hover { transform: translateY(-5px); border-color: rgba(103,163,255,.35); background: var(--surface); }
 .service-card.featured { background: linear-gradient(155deg, rgba(24,57,102,.8), rgba(13,26,45,.9)); border-color: rgba(103,163,255,.3); }
 .service-number { position: absolute; right: 27px; top: 25px; color: #536984; font-size: 12px; }
-.service-icon { width: 52px; height: 52px; margin-bottom: 50px; display: grid; place-items: center; color: #a8c8ff; background: rgba(47,124,255,.1); border: 1px solid rgba(103,163,255,.24); border-radius: 13px; font-size: 24px; }
+.service-icon { width: 52px; height: 52px; margin-bottom: 50px; display: grid; place-items: center; color: #a8c8ff; background: rgba(47,124,255,.1); border: 1px solid rgba(103,163,255,.24); border-radius: 13px; font-size: 20px; font-weight: 800; }
 .service-card h3 { font-size: 23px; letter-spacing: -.02em; }
 .service-card p { color: var(--muted); font-size: 14px; }
 .service-card ul { margin: 27px 0 0; padding: 23px 0 0; list-style: none; border-top: 1px solid var(--line); }

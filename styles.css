@@ -29,11 +29,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-header { position: fixed; z-index: 100; inset: 0 0 auto; height: 78px; display: flex; align-items: center; border-bottom: 1px solid transparent; transition: .25s ease; }
 .site-header.scrolled { background: rgba(4, 10, 20, .86); border-color: var(--line); backdrop-filter: blur(18px); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; }
-.brand { display: inline-flex; align-items: center; gap: 12px; }
-.brand-mark { width: 38px; height: 38px; display: grid; place-items: center; font-weight: 800; font-size: 21px; color: white; background: linear-gradient(145deg, var(--blue), #17499e); border: 1px solid rgba(255,255,255,.22); border-radius: 11px; box-shadow: 0 10px 26px rgba(47,124,255,.23); }
-.brand-copy { display: grid; line-height: 1; gap: 5px; letter-spacing: .16em; }
-.brand-copy strong { font-size: 14px; }
-.brand-copy small { font-size: 8px; color: var(--muted); letter-spacing: .24em; }
+.brand { display: inline-flex; align-items: center; line-height: 0; }
+.brand-logo { display: block; width: auto; height: 52px; object-fit: contain; }
+.site-footer .brand-logo { height: 54px; }
 .primary-nav { display: flex; align-items: center; gap: 32px; color: #c9d4e3; font-size: 14px; }
 .primary-nav > a { transition: color .2s ease; }
 .primary-nav > a:hover, .primary-nav > a:focus-visible { color: white; }
@@ -141,7 +139,8 @@ h1 em, h2 em { color: var(--blue-light); font-style: normal; }
 
 .about { background: linear-gradient(130deg, rgba(15,42,75,.7), rgba(4,10,20,.95)); border-top: 1px solid var(--line); }
 .about-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 90px; align-items: center; }
-.about-mark { width: 300px; height: 300px; display: grid; place-items: center; color: rgba(157,196,255,.9); font-size: 135px; font-weight: 800; background: linear-gradient(145deg, rgba(47,124,255,.2), rgba(10,30,55,.2)); border: 1px solid rgba(103,163,255,.25); border-radius: 72px 25px 72px 25px; box-shadow: 0 35px 80px rgba(0,0,0,.25); }
+.about-mark { width: 320px; height: 280px; display: grid; place-items: center; padding: 18px; overflow: hidden; background: #061329; border: 1px solid rgba(103,163,255,.25); border-radius: 72px 25px 72px 25px; box-shadow: 0 35px 80px rgba(0,0,0,.25); }
+.about-mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .about-values { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 9px; }
 .about-values span { padding: 8px 12px; color: #c5d4e9; border: 1px solid var(--line); border-radius: 50px; font-size: 11px; }
 
@@ -176,7 +175,7 @@ h1 em, h2 em { color: var(--blue-light); font-style: normal; }
   .work-large { grid-template-columns: 1fr; }
   .work-large .work-copy { padding: 32px; }
   .about-grid { grid-template-columns: 1fr; }
-  .about-mark { width: 210px; height: 210px; font-size: 90px; }
+  .about-mark { width: 240px; height: 210px; padding: 12px; }
   .footer-inner { grid-template-columns: 1fr; justify-items: start; }
   .footer-inner > p { text-align: left; }
 }
@@ -184,6 +183,8 @@ h1 em, h2 em { color: var(--blue-light); font-style: normal; }
 @media (max-width: 720px) {
   .container { width: min(calc(100% - 28px), var(--max)); }
   .site-header { height: 68px; }
+  .brand-logo { height: 44px; }
+  .site-footer .brand-logo { height: 50px; }
   .menu-toggle { display: block; }
   .primary-nav { position: absolute; top: 67px; left: 14px; right: 14px; padding: 18px; display: none; align-items: stretch; flex-direction: column; gap: 4px; background: rgba(7,16,31,.98); border: 1px solid var(--line); border-radius: 15px; box-shadow: 0 20px 50px rgba(0,0,0,.4); }
   .primary-nav.open { display: flex; }
